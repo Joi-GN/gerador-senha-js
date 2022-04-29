@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Gerador de Senhas</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Gerador de Senhas</h1>
+            <div class="generator-result">
+                <input id="display" type="text" disabled>
+                <button id="copy-btn">Copiar</button>
+            </div>
+            <form>
+                <div class="options">
+                    <label for="pw-length">Tamanho da senha</label>
+                    <input type="number" id="pw-length" min="4" max="20" value="8">
+                </div>
+                <div class="options">
+                    <label for="uppercase">Incluir letras maiúsculas</label>
+                    <input type="checkbox" id="uppercase">
+                </div>
+                <div class="options">
+                    <label for="lowercase">Incluir letras minúsculas</label>
+                    <input type="checkbox" id="lowercase">
+                </div>
+                <div class="options">
+                    <label for="symbol">Incluir símbolos</label>
+                    <input type="checkbox" id="symbol">
+                </div>
+                <div class="options">
+                    <label for="number">Incluir números</label>
+                    <input type="checkbox" id="number">
+                </div>
+                <input id="generate-btn" type="button" value="Gerar">
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <a href="https://www.linkedin.com/in/joice-gomes-dn/" target="_blank">
+            LinkedIn
+        </a>
+        <p>Dev Joice Gomes &copy; 2022</p>
+        <a href="https://github.com/Joi-GN" target="_blank">
+            Github
+        </a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
