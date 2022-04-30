@@ -1,11 +1,12 @@
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
     body{
         background-color: crimson;
+        height: 100vh;
+        width: 100vw;
     }
 
     .container{
         box-shadow: none;
-        width: 100%;
     }
 
     footer{
