@@ -154,10 +154,11 @@ footer a:hover {
 /* FOOTER */
 
 footer {
+    position: absolute;
+    bottom: 2em;
     display: flex;
     gap: 2em;
     font-size: 0.6em;
-    margin-top: 5em;
 }
 
 footer a {

@@ -1,6 +1,6 @@
-# Gerador de senha
+# Gerador de senhas
 
-Gerador de senha desenvolvido com HTML, CSS e JavaScript.   
+Gerador de senhas desenvolvido com HTML, CSS e JavaScript.   
 
 Com o gerador você pode gerar uma senha aleatória escolhendo o tamanho da senha e a opção de incluir letras maiúsculas e minúsculas, símbolos e números, assim você vai poder utilizar uma senha forte em suas contas pessoais.
 
