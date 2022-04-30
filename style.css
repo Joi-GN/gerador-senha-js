@@ -1,26 +1,28 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI';
 }
 
-body{
+body {
     background-color: #141414;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     height: 100vh;
 }
 
-h1{
+h1 {
     font-size: 2.35em;
     text-align: center;
 }
 
-.container{
+/* GENERATOR */
+
+.container {
     background-color: crimson;
     border-radius: 6px;
     padding: 2em;
@@ -28,17 +30,19 @@ h1{
     box-shadow: white 8px 8px;
 }
 
-.generator-result, .options{
+.generator-result,
+.options {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.generator-result{
+.generator-result {
+    position: relative;
     margin: 1.5em 0;
 }
 
-#display{
+#display {
     border: none;
     border-radius: 6px 0 0 6px;
     color: inherit;
@@ -46,46 +50,108 @@ h1{
     width: 80%;
 }
 
-#copy-btn{
+#copy-btn {
     background-color: #940521;
     border: none;
     border-radius: 0 6px 6px 0;
     color: white;
     cursor: pointer;
+    font-weight: 600;
     padding: 1em 0;
     width: 20%
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
-.options{
-    margin-bottom: 0.8em;
-}
-
-#pw-length{
+#pw-length {
+    border: none;
+    border-radius: 2px;
+    background-color: #eee;
+    font-size: 0.95em;
+    font-weight: 500;
+    padding: 0.2em;
     text-align: center;
 }
 
-#generate-btn{
+.options {
+    margin-bottom: 1em;
+    position: relative;
+    user-select: none;
+}
+
+/* CHECKBOX STYLE */
+
+.options input[type=checkbox] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.options:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.options input:checked ~ .checkmark {
+    background-color: #940521;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.options input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.options .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+#generate-btn {
     background-color: #940521;
     color: inherit;
     align-self: center;
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    font-weight: 600;
     margin-top: 1em;
     padding: 1em;
     width: 50%;
 }
 
-#generate-btn:hover, #copy-btn:hover, footer a:hover{
+#generate-btn:hover,
+#copy-btn:hover,
+footer a:hover {
     opacity: 0.7;
 }
 
-footer{
+/* FOOTER */
+
+footer {
     position: absolute;
     bottom: 1em;
     display: flex;
@@ -93,7 +159,44 @@ footer{
     font-size: 0.7em;
 }
 
-footer a{
+footer a {
     color: inherit;
     text-decoration: none;
+}
+
+/* POPUP */
+
+.popup {
+    position: absolute;
+    width: fit-content;
+    background-color: #940521;
+    border-radius: 6px;
+    padding: 0.8em;
+    opacity: 0.9;
+    user-select: none;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.popup::before {
+    content: " ";
+    top: 100%;
+    right: 47%;
+    position: absolute;
+    border: 10px solid;
+    border-color: #940521 transparent transparent transparent;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.generator-result .popup {
+    right: -10%;
+    bottom: 135%;
+}
+
+form .popup {
+    bottom: 25%;
+    right: 12%;
 }
