@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/responsive.css">
 
     <title>Gerador de Senhas</title>
 </head>
@@ -15,7 +17,7 @@
     <main>
         <div class="container">
             <h1>Gerador de Senhas</h1>
-            <div class="generator-result">
+            <div class="generator-output">
                 <input id="display" type="text" disabled>
                 <button id="copy-btn">Copiar</button>
                 <span id="copy-popup" class="hidden popup">Senha copiada</span>
@@ -29,7 +31,7 @@
 
                 <label class="options" for="uppercase">
                     Incluir letras maiúsculas
-                    <input type="checkbox" id="uppercase">
+                    <input type="checkbox" id="uppercase" checked>
                     <span class="checkmark"></span>
                 </label>
 
@@ -41,18 +43,18 @@
 
                 <label class="options" for="symbol">
                     Incluir símbolos
-                    <input type="checkbox" id="symbol">
+                    <input type="checkbox" id="symbol" checked>
                     <span class="checkmark"></span>
                 </label>
 
                 <label class="options" for="number">
                     Incluir números
-                    <input type="checkbox" id="number">
+                    <input type="checkbox" id="number" checked>
                     <span class="checkmark"></span>
                 </label>
 
                 <input id="generate-btn" type="button" value="Gerar senha">
-                <span id="option-popup" class="hidden popup">Escolha alguma opção primeiro!</span>
+                <span id="option-popup" class="hidden popup">Selecione alguma opção primeiro!</span>
             </form>
         </div>
     </main>
@@ -67,7 +69,7 @@
         </a>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="assets/script.js"></script>
 </body>
 
 </html>
